@@ -75,5 +75,5 @@ function descriptografar(frase = "🦇🌜☀️"){
     //imprime o resultado da tradução.
 }
 
-criptografar("te amo um bazilhao de bazilhoes");
-descriptografar('☂️🎹 🦇🌜☀️ ↩️🌜 ⛰️🦇👠🛑✅🌴🦇☀️ 🌮🎹 ⛰️🦇👠🛑✅🌴☀️🎹⚡');
+criptografar("criptografia");
+descriptografar('🦀📈🛑🧢☂️☀️🍤📈🦇📊🛑🦇');
