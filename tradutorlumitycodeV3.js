@@ -30,7 +30,7 @@ const alfabeto = {
 const GraphemeSplitter = require('grapheme-splitter');
 const splitter = new GraphemeSplitter();
 
-function criptografar(frase = "amo minha mulher"){
+function criptografar(frase = "criptografia"){
 
     frase = frase.toLowerCase();
     
@@ -43,7 +43,7 @@ function criptografar(frase = "amo minha mulher"){
     return console.log(frase);
 }
 
-function descriptografar(frase = "🦇🌜☀️"){
+function descriptografar(frase = "🦀📈🛑"){
 
     let entries = Object.entries(alfabeto).map(([key, val]) => [val, key]);
     //inverte a posição de par chave(key) e valor(val)...
