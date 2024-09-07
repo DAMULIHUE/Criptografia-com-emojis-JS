@@ -47,7 +47,7 @@ function criptografar(frase = "amor"){
         }
     }
 
-    
+    console.log(result);
 }
 function descriptografar(frase = "🦇🌜☀️"){
 
