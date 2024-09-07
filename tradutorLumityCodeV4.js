@@ -24,7 +24,8 @@ const alfabeto = {
     'w': "🌛",
     'x': "⚔️",
     'y': "☔",
-    'z': "👠"
+    'z': "👠",
+    ' ': " "
 };
 
 const GraphemeSplitter = require('grapheme-splitter');
