@@ -79,7 +79,7 @@ function criptografarDescrip(){
     document.getElementById("testelegal").innerText = cripDesc;
 }
 
-function seilaPorra(){
+function input(){
     result = "";
 
     if (cripDesc == 1){
