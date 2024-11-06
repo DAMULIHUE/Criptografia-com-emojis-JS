@@ -25,17 +25,19 @@ const alfabeto = {
     'x': "⚔️",
     'y': "☔",
     'z': "👠",
-    ' ': " "
+    ' ': "   "
 };
+
 
 let result = '';    
 let caracterInvalid = 0;
-const GraphemeSplitter = require('grapheme-splitter');
-const splitter = new GraphemeSplitter();
+let cripDesc = 0;
+var splitter = new GraphemeSplitter();
 
 
-function criptografar(frase = "meus"){
+function criptografar(){
 
+    let frase = document.getElementById("texto").value;
     frase = frase.toLowerCase();
     let fr = Object.entries(frase);
     
@@ -45,16 +47,15 @@ function criptografar(frase = "meus"){
             result += alfabeto[i[1]];
         }else if (caracterInvalid == 0){
             console.log(`insira um valor válido: ${i[1]}`);
-            result = null;
+            result = "";
             caracterInvalid++;
         }
     });
-
-    console.log(result);
 }
 
-function descriptografar(frase = "🦇🌜☀️ewfdv"){
+function descriptografar(){
 
+    let frase = document.getElementById("texto").value;
     let entries = Object.entries(alfabeto).map(([key, val]) => [val, key]);
     let graphemes = splitter.splitGraphemes(frase);
     let alfabetoEmoji = Object.fromEntries(entries);
@@ -65,12 +66,33 @@ function descriptografar(frase = "🦇🌜☀️ewfdv"){
             result += alfabetoEmoji[i];
         }else if (caracterInvalid == 0){
             console.log(`insira um valor válido: ${i}`);
-            result = null;
+            result = "";
             caracterInvalid++;
         }
     });
-
-    
-    console.log(result);
 }
-criptografar('bom dia princesa');
+
+function criptografarDescrip(){
+    cripDesc = !cripDesc;
+    //1 = desc
+    //0 = crip
+    document.getElementById("testelegal").innerText = cripDesc;
+}
+
+function seilaPorra(){
+    result = "";
+
+    if (cripDesc == 1){
+        descriptografar();
+    }else{
+        criptografar();
+    }
+
+    document.getElementById("parag").innerText = result;
+}
+
+function apagar(){
+    document.getElementById("parag").innerText = "";
+    result = "";
+    caracterInvalid = 0;
+}
